@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">E-Shop</h1>
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Buscar productos..." class="px-4 py-2 rounded-lg focus:outline-none">
+        <button class="bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-gray-100">Buscar</button>
+      </div>
+      <button id="cart-button" class="relative bg-white text-red-600 px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-gray-100">
+        <i class="bx bx-cart text-2xl"></i>
+        <span>Carrito</span>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-900 text-white text-xs px-2 py-1 rounded-full">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-red-100 py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Encuentra tus productos favoritos</h2>
+      <p class="text-lg mb-8">Explora nuestra amplia variedad de productos de calidad.</p>
+      <button class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">Ver productos</button>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-6">Productos Destacados</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="text-lg font-bold">Producto 1</h4>
+            <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-red-600 font-bold">$20.00</span>
+              <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="1" data-name="Producto 1" data-price="20.00">
+                Añadir
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 2</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="2" data-name="Producto 2" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 3</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="3" data-name="Producto 3" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 4</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="4" data-name="Producto 4" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 5</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="5" data-name="Producto 5" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 6</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="6" data-name="Producto 6" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 7</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="7" data-name="Producto 7" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 8</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="8" data-name="Producto 8" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Producto 9</h4>
+              <p class="text-sm text-gray-500">Descripción breve del producto.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-red-600 font-bold">$20.00</span>
+                <button class="add-to-cart bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700" data-id="9" data-name="Producto 9" data-price="20.00">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+        <!-- Repite las tarjetas de productos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+    <div class="bg-white rounded-lg w-96 p-4">
+      <div class="flex justify-between items-center border-b pb-2 mb-4">
+        <h2 class="text-xl font-bold">Carrito de Compras</h2>
+        <button id="close-cart" class="text-red-600 hover:text-red-800"><i class="bx bx-x text-2xl"></i></button>
+      </div>
+      <ul id="cart-items" class="space-y-4"></ul>
+      <div class="mt-4 text-right">
+        <button id="checkout" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Footer -->
+   <footer class="bg-red-600 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>© 2024 E-Shop. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
